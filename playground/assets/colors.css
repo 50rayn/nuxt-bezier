@@ -1,0 +1,27 @@
+:root {
+  /* Slate color palette */
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --slate-950: #020420;
+
+  /* Green color palette */
+  --green-50: #EFFDF5;
+  --green-100: #D9FBE8;
+  --green-200: #B3F5D1;
+  --green-300: #75EDAE;
+  --green-400: #00DC82;
+  --green-500: #00C16A;
+  --green-600: #00A155;
+  --green-700: #007F45;
+  --green-800: #016538;
+  --green-900: #0A5331;
+  --green-950: #052e16;
+}

@@ -1,0 +1,17 @@
+:root {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #fff;
+
+  * { box-sizing: border-box; }
+
+  [role="button"],
+  & button {
+    cursor: pointer;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: var(--slate-950);
+  }
+}
