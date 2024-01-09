@@ -1,8 +1,20 @@
 {
   "name": "nuxt-bezier",
   "version": "1.10.0",
-  "description": "My new Nuxt module",
-  "repository": "@noction/nuxt-bezier",
+  "description": "Nuxt reusable transition components",
+  "author": {
+    "name": "50rayn",
+    "email": "soryngitlan@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/50rayn/nuxt-bezier.git"
+  },
+  "homepage": "https://50rayn.github.io/nuxt-bezier/",
+  "bugs": {
+    "url": "https://github.com/50rayn/nuxt-bezier/issues",
+    "email": "soryngitlan@gmail.com"
+  },
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -22,7 +34,7 @@
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
-    "release": "npm run lint && npm run test && npm run prepack && sheep release -b main",
+    "release": "npm run lint && npm run test && npm run prepack && changelogen",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch"
@@ -32,7 +44,6 @@
     "@nuxt/kit": "^3.9.0"
   },
   "devDependencies": {
-    "@akryum/sheep": "^0.5.0",
     "@nuxt/devtools": "latest",
     "@nuxt/eslint-config": "^0.2.0",
     "@nuxt/module-builder": "^0.5.5",

@@ -16,7 +16,7 @@
     </div>
 
     <h2>nuxt-bezier</h2>
-    <h3>1.10.0</h3>
+    <h3>1.10.1</h3>
   </tiles-wrapper>
 </template>
 

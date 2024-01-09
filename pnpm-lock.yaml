@@ -9,9 +9,6 @@ dependencies:
     version: 3.9.0(rollup@3.29.4)
 
 devDependencies:
-  '@akryum/sheep':
-    specifier: ^0.5.0
-    version: 0.5.0
   '@nuxt/devtools':
     specifier: latest
     version: 1.0.6(nuxt@3.9.0)(rollup@3.29.4)(vite@5.0.10)
@@ -48,11 +45,6 @@ packages:
   /@aashutoshrathi/word-wrap@1.2.6:
     resolution: {integrity: sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==}
     engines: {node: '>=0.10.0'}
-    dev: true
-
-  /@akryum/sheep@0.5.0:
-    resolution: {integrity: sha512-VcJqPUpeAtjiUwuSuwZSkl09LUpcsk7PKgGy4EUMoAM3St05hkT+PaBnQxgBgsJIDl6PfWfq3xRhPxkL0h1REA==}
-    hasBin: true
     dev: true
 
   /@ampproject/remapping@2.2.1:
