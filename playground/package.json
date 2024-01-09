@@ -1,6 +1,7 @@
 {
   "private": true,
   "name": "nuxt-bezier-playground",
+  "version": "1.10.1",
   "type": "module",
   "scripts": {
     "dev": "nuxi dev --host 0.0.0.0",

@@ -16,11 +16,13 @@
     </div>
 
     <h2>nuxt-bezier</h2>
-    <h3>1.10.1</h3>
+    <h3>{{ packageJson.version }}</h3>
   </tiles-wrapper>
 </template>
 
 <script setup>
+import packageJson from '@/package.json'
+
 defineOptions({ inheritAttrs: false })
 </script>
 
