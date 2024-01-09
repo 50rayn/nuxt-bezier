@@ -1,6 +1,11 @@
 # Nuxt Bezier
 
+[![NPM version](https://img.shields.io/npm/v/nuxt-bezier.svg?style=flat)](https://npmjs.com/package/nuxt-bezier)
+[![NPM downloads](https://img.shields.io/npm/dm/nuxt-bezier.svg?style=flat)](https://npmjs.com/package/nuxt-bezier)
+
 This module integrates the [@noction/vue-bezier](https://github.com/Noction/vue-bezier) component with Nuxt 3.
+
+### [Demo](https://50rayn.github.io/nuxt-bezier/)
 
 ## Install
 
