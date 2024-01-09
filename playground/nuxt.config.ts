@@ -1,4 +1,7 @@
 export default defineNuxtConfig({
+  app: {
+    baseURL: '/nuxt-bezier/'
+  },
   css: [
     'normalize.css/normalize.css',
     '~/assets/colors.css',
@@ -13,5 +16,10 @@ export default defineNuxtConfig({
       'DM Sans': [400,600,700]
     }
   },
-  devtools: { enabled: true }
+  devtools: { enabled: true },
+  nitro: {
+    prerender: {
+      failOnError: false,
+    }
+  }
 })
