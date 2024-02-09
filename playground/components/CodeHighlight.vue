@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 import { getHighlighterCore } from 'shikiji/core'
-import { getWasmInlined } from 'shikiji/wasm'
+import getWasm from 'shikiji/wasm'
 import MaterialThemeLighter from 'shikiji/themes/material-theme-lighter.mjs'
 import MaterialThemePalenight from 'shikiji/themes/material-theme-palenight.mjs'
 import MaterialTheme from 'shikiji/themes/material-theme.mjs'
@@ -48,7 +48,7 @@ const highlighter = await getHighlighterCore({
     import('shikiji/langs/shellscript.mjs'),
     import('shikiji/langs/vue.mjs'),
   ],
-  loadWasm: getWasmInlined
+  loadWasm: getWasm
 })
 
 const html = computed(() => highlighter.codeToHtml(props.code, {
