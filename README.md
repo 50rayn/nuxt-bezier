@@ -10,7 +10,7 @@ This module integrates the [@noction/vue-bezier](https://github.com/Noction/vue-
 ## Install
 
 ```bash
-npm install nuxt-bezier
+npx nuxi@latest module add nuxt-bezier
 ```
 
 ## Usage
