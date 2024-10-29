@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@noction/vue-bezier':
-    specifier: ^1.12.0
-    version: 1.12.0
+    specifier: ^2.0.0-beta.1
+    version: 2.0.0-beta.1
   '@nuxt/kit':
     specifier: ^3.12.4
     version: 3.12.4(magicast@0.3.4)(rollup@3.29.4)
@@ -1399,8 +1399,8 @@ packages:
       urlpattern-polyfill: 8.0.2
     dev: true
 
-  /@noction/vue-bezier@1.12.0:
-    resolution: {integrity: sha512-WyJBKQwcDKMPcTL7u6lVeWHLIS48dp2DLkoZOSHLcoewVn8KVe7FltVzDboNXkijKv2AHEw2ElxuiU0Ro5gDCA==}
+  /@noction/vue-bezier@2.0.0-beta.1:
+    resolution: {integrity: sha512-TIOq5Z2vv7evjfzGC66ur9C6db+5tX/tpAV/lTvHgqmCnbC4t0OyCqWZyRps2iFB2VeuhkERDl2Vn3k0Li/4hQ==}
     dev: false
 
   /@nodelib/fs.scandir@2.1.5:

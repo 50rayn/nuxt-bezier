@@ -40,7 +40,7 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
-    "@noction/vue-bezier": "^1.12.0",
+    "@noction/vue-bezier": "^2.0.0-beta.1",
     "@nuxt/kit": "^3.12.4"
   },
   "devDependencies": {
