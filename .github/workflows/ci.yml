@@ -104,7 +104,10 @@ jobs:
             ${{ runner.os }}-node-22-pnpm-store-
 
       - name: Install dependencies
-        run: nci --offline
+        run: nci -r --prefer-offline
+
+      - name: Prepare
+        run: nr dev:prepare
 
       - name: Run Tests with Coverage
         run: nr test
