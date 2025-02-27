@@ -37,7 +37,13 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
       - name: Install dependencies
-        run: nci
+        run: nci -r --prefer-offline
+
+      - name: Prepare
+        run: nr dev:prepare
+
+      - name: Build
+        run: nr prepack
 
       - name: Publish
         run: npm publish --provenance --access public --no-git-checks
