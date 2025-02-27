@@ -1,5 +1,5 @@
 <template>
-  <tiles-wrapper class="header-section">
+  <TilesBorderWrapper class="header-section">
     <div class="logo">
       <svg
         width="61"
@@ -17,7 +17,7 @@
 
     <h2>nuxt-bezier</h2>
     <h3>{{ packageJson.version }}</h3>
-  </tiles-wrapper>
+  </TilesBorderWrapper>
 </template>
 
 <script setup>

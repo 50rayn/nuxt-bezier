@@ -4,18 +4,18 @@
       :group="true"
       class="list-wrapper"
     >
-      <TilesInstallation />
+      <TilesInstallationCmd />
 
-      <TilesConfiguration />
+      <TilesConfigurationEx />
 
-      <TilesHeader />
+      <TilesHeaderInfo />
 
 
       <template
         v-for="name in transitionNames"
         :key="name"
       >
-        <TilesBezier
+        <TilesBezierItem
           :name="name"
           :comp="transitionList[name]"
         />

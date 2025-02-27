@@ -1,8 +1,8 @@
 <template>
-  <tiles-wrapper class="interactive-section">
+  <TilesBorderWrapper class="interactive-section">
     <button
       class="transition-name"
-      @click="toggleShow"
+      @click="show = !show"
     >
       {{ props.name }}
     </button>
@@ -13,20 +13,14 @@
     />
 
     <div class="transition-wrapper">
-      <component
-        :is="props.comp"
-        @before-enter="inProgress = true"
-        @before-leave="inProgress = true"
-        @after-enter="inProgress = false"
-        @after-leave="inProgress = false"
-      >
+      <component :is="props.comp">
         <div
           v-if="show"
           class="transition-content"
         />
       </component>
     </div>
-  </tiles-wrapper>
+  </TilesBorderWrapper>
 </template>
 
 <script setup>
@@ -42,7 +36,6 @@ const props = defineProps({
 })
 
 const show = ref(true)
-const inProgress = ref(false)
 let timer
 
 watch(() => show.value, (newVal) => {
@@ -53,11 +46,6 @@ watch(() => show.value, (newVal) => {
   }
 })
 
-function toggleShow () {
-  if (inProgress.value === true) return
-
-  show.value = !show.value
-}
 
 function copyTransition () {
   const transitionTemplate = `<${props.name}><${props.name}/>`

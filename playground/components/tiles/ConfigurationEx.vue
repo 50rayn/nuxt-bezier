@@ -8,7 +8,7 @@ const code = `export default defineNuxtConfig({
 </script>
 
 <template>
-  <tiles-wrapper class="configuration-section">
+  <TilesBorderWrapper class="configuration-section">
     <h2>Configuration</h2>
 
     <CodeHighlight
@@ -16,7 +16,7 @@ const code = `export default defineNuxtConfig({
       language="javascript"
       :code="code"
     />
-  </tiles-wrapper>
+  </TilesBorderWrapper>
 </template>
 
 <style>
