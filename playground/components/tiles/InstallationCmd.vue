@@ -1,5 +1,5 @@
 <template>
-  <tiles-wrapper class="installation-section">
+  <TilesBorderWrapper class="installation-section">
     <h2>Installation</h2>
 
     <code-highlight
@@ -20,7 +20,7 @@
         </div>
       </template>
     </code-highlight>
-  </tiles-wrapper>
+  </TilesBorderWrapper>
 </template>
 
 <script setup>
@@ -30,10 +30,10 @@ defineEmits(['shuffle', 'toggle'])
 const selected = ref('pnpm')
 const MODULE_NAME = 'nuxt-bezier'
 const methods = {
-  pnpm: `pnpm add ${MODULE_NAME}`,
-  npm: `npm install ${MODULE_NAME}`,
-  yarn: `yarn add ${MODULE_NAME}`,
-  bun: `bun add ${MODULE_NAME}`
+  pnpm: `pnpm dlx nuxi@latest module add ${MODULE_NAME}`,
+  npm: `npx nuxi@latest module add ${MODULE_NAME}`,
+  yarn: `yarn dlx nuxi@latest module add ${MODULE_NAME}`,
+  bun: `bun x nuxi@latest module add ${MODULE_NAME}`
 }
 
 </script>

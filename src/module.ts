@@ -47,9 +47,6 @@ export default defineNuxtModule<ModuleOptions>({
         filePath: '@noction/vue-bezier',
         export: componentName
       })
-      .catch(error => {
-        console.error(`Error registering component "${componentName}":`, error);
-      })
     }
   }
 })
