@@ -1,16 +1,17 @@
 import { defineNuxtModule, addComponent } from '@nuxt/kit'
 
 const COMPONENTS = [
-  'FadeTransition',
-  'ZoomCenterTransition',
-  'ZoomXTransition',
-  'ZoomYTransition',
-  'SlideXLeftTransition',
-  'SlideXRightTransition',
-  'SlideYUpTransition',
-  'SlideYDownTransition',
+  'BlurTransition',
+  'ClipPathTransition',
+  'DissolveTransition',
+  'FadeSlideTransition',
+  'PushTransition',
+  'RotateTransition',
   'ScaleTransition',
-  'CollapseTransition',
+  'WipeTransition',
+  'ZoomTransition',
+  'DissolveListTransition',
+  'ScaleListTransition',
 ] as const;
 
 type PartialComponents =  (typeof COMPONENTS)[number]

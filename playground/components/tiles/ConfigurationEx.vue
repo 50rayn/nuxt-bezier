@@ -20,12 +20,12 @@ const code = `export default defineNuxtConfig({
 </template>
 
 <style>
-.configuration-section {
-  @media (min-width: 768px) { grid-area: 2 / span 2 / 2 / -1 }
+  .configuration-section {
+    @media (width >= 768px) { grid-area: 2 / span 2 / 2 / -1 }
 
-  h2 {
-    padding-inline: .5rem;
-    margin-top: 0;
+    h2 {
+      padding-inline: .5rem;
+      margin-top: 0;
+    }
   }
-}
 </style>
