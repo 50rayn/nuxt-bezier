@@ -27,6 +27,9 @@ jobs:
       - name: Install dependencies
         run: nci
 
+      - name: Install playground dependencies
+        run: pnpm -C playground install
+
       - name: Prepare
         run: nr dev:prepare
 

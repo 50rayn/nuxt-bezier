@@ -9,13 +9,8 @@ export default defineNuxtConfig({
   ],
   modules: [
     '../src/module',
-    '@nuxtjs/google-fonts',
+    '@nuxt/fonts',
   ],
-  googleFonts: {
-    families: {
-      'DM Sans': [400, 600, 700],
-    },
-  },
   devtools: { enabled: true },
   nitro: {
     prerender: {
