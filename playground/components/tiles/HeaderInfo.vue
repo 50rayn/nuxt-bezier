@@ -50,6 +50,7 @@ onMounted(() => {
     grid-template-rows: 64px 2rem 1.5rem;
     gap: 1rem;
     place-items: center;
+    align-content: center;
 
     img {
       position: absolute;
