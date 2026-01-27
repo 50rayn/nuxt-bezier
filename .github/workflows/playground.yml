@@ -41,7 +41,7 @@ jobs:
         run: nr dev:prepare
 
       - name: Generate
-        run: nuxi generate playground
+        run: npx nuxi generate playground
 
       - name: Copy index.html to 404.html for SPA routing
         run: cp playground/.output/public/index.html playground/.output/public/404.html || true
