@@ -1,26 +1,26 @@
 export default defineNuxtConfig({
   app: {
-    baseURL: '/nuxt-bezier/'
+    baseURL: '/nuxt-bezier/',
   },
   css: [
     'normalize.css/normalize.css',
     '~/assets/colors.css',
-    '~/assets/index.css'
+    '~/assets/index.css',
   ],
   modules: [
     '../src/module',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
   ],
   googleFonts: {
     families: {
-      'DM Sans': [400,600,700]
-    }
+      'DM Sans': [400, 600, 700],
+    },
   },
   devtools: { enabled: true },
   nitro: {
     prerender: {
       failOnError: false,
-    }
+    },
   },
-  compatibilityDate: '2025-02-27'
+  compatibilityDate: '2025-02-27',
 })

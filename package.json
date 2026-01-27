@@ -40,22 +40,22 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
-    "@noction/vue-bezier": "^1.12.0",
-    "@nuxt/kit": "^3.15.4"
+    "@noction/vue-bezier": "^2.0.3",
+    "@nuxt/kit": "^4.3.0"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^2.1.0",
-    "@nuxt/eslint-config": "^1.1.0",
-    "@nuxt/module-builder": "^0.8.4",
-    "@nuxt/schema": "^3.15.4",
-    "@nuxt/test-utils": "^3.17.0",
-    "@types/node": "^22.13.5",
-    "bumpp": "^10.0.3",
-    "changelogen": "^0.6.0",
-    "eslint": "^9.21.0",
-    "nuxt": "^3.15.4",
-    "vitest": "^3.0.7",
-    "typescript": "~5.6.3"
+    "@nuxt/devtools": "^3.1.1",
+    "@nuxt/eslint-config": "^1.13.0",
+    "@nuxt/module-builder": "^1.0.2",
+    "@nuxt/schema": "^4.3.0",
+    "@nuxt/test-utils": "^3.23.0",
+    "@types/node": "^25.0.10",
+    "bumpp": "^10.4.0",
+    "changelogen": "^0.6.2",
+    "eslint": "^9.39.2",
+    "nuxt": "^4.3.0",
+    "typescript": "~5.9.3",
+    "vitest": "^4.0.18"
   },
-  "packageManager": "pnpm@10.5.2"
+  "packageManager": "pnpm@10.28.0"
 }

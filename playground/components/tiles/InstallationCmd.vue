@@ -1,3 +1,17 @@
+<script setup>
+defineOptions({ inheritAttrs: false })
+defineEmits(['shuffle', 'toggle'])
+
+const selected = ref('pnpm')
+const MODULE_NAME = 'nuxt-bezier'
+const methods = {
+  pnpm: `pnpm dlx nuxi@latest module add ${MODULE_NAME}`,
+  npm: `npx nuxi@latest module add ${MODULE_NAME}`,
+  yarn: `yarn dlx nuxi@latest module add ${MODULE_NAME}`,
+  bun: `bun x nuxi@latest module add ${MODULE_NAME}`,
+}
+</script>
+
 <template>
   <TilesBorderWrapper class="installation-section">
     <h2>Installation</h2>
@@ -12,7 +26,7 @@
             v-for="(_, key) in methods"
             :key="key"
             class="install-btn"
-            :class="{selected: selected === key}"
+            :class="{ selected: selected === key }"
             @click="selected = key"
           >
             {{ key }}
@@ -23,57 +37,42 @@
   </TilesBorderWrapper>
 </template>
 
-<script setup>
-defineOptions({ inheritAttrs: false })
-defineEmits(['shuffle', 'toggle'])
-
-const selected = ref('pnpm')
-const MODULE_NAME = 'nuxt-bezier'
-const methods = {
-  pnpm: `pnpm dlx nuxi@latest module add ${MODULE_NAME}`,
-  npm: `npx nuxi@latest module add ${MODULE_NAME}`,
-  yarn: `yarn dlx nuxi@latest module add ${MODULE_NAME}`,
-  bun: `bun x nuxi@latest module add ${MODULE_NAME}`
-}
-
-</script>
-
 <style>
-.installation-section {
-  @media (min-width: 1024px) { grid-area: 1 / 1 / 2 / 3 }
+  .installation-section {
+    @media (width >= 1024px) { grid-area: 1 / 1 / 2 / 3 }
 
-  h2 {
-    padding-inline: .5rem;
-    margin-top: 0;
-  }
+    h2 {
+      padding-inline: .5rem;
+      margin-top: 0;
+    }
 
-  .install-methods {
-    display: flex;
-    row-gap: .25rem;
-    font-size: .875rem;
+    .install-methods {
+      display: flex;
+      row-gap: .25rem;
+      font-size: .875rem;
 
-    button.install-btn {
-      padding: .5rem;
-      background-color: transparent;
-      background-image: none;
-      border: 0;
-      border-radius: 0.375rem;
-      color: var(--slate-800);
+      button.install-btn {
+        padding: .5rem;
+        color: var(--slate-800);
+        background-color: transparent;
+        background-image: none;
+        border: 0;
+        border-radius: .375rem;
 
-      @media (prefers-color-scheme: dark) { color: var(--slate-200) }
+        @media (prefers-color-scheme: dark) { color: var(--slate-200) }
 
-      &:hover {
-        background-color: var(--slate-200);
+        &:hover {
+          background-color: var(--slate-200);
 
-        @media (prefers-color-scheme: dark) { background-color: var(--slate-900) }
-      }
+          @media (prefers-color-scheme: dark) { background-color: var(--slate-900) }
+        }
 
-      &.selected {
-        background-color: var(--slate-300);
+        &.selected {
+          background-color: var(--slate-300);
 
-        @media (prefers-color-scheme: dark) { background-color: var(--slate-800) }
+          @media (prefers-color-scheme: dark) { background-color: var(--slate-800) }
+        }
       }
     }
   }
-}
 </style>

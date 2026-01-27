@@ -1,3 +1,9 @@
+<script setup>
+import packageJson from '@/package.json'
+
+defineOptions({ inheritAttrs: false })
+</script>
+
 <template>
   <TilesBorderWrapper class="header-section">
     <div class="logo">
@@ -20,21 +26,15 @@
   </TilesBorderWrapper>
 </template>
 
-<script setup>
-import packageJson from '@/package.json'
-
-defineOptions({ inheritAttrs: false })
-</script>
-
 <style>
-.header-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  grid-area: 1 / -2 / 2 / -1;
+  .header-section {
+    display: flex;
+    flex-direction: column;
+    grid-area: 1 / -2 / 2 / -1;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
 
-  > * { margin: 0 }
-}
+    > * { margin: 0 }
+  }
 </style>

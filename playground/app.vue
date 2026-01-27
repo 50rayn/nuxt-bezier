@@ -1,82 +1,79 @@
-<template>
-  <div class="page-wrapper container">
-    <FadeTransition
-      :group="true"
-      class="list-wrapper"
-    >
-      <TilesInstallationCmd />
-
-      <TilesConfigurationEx />
-
-      <TilesHeaderInfo />
-
-
-      <template
-        v-for="name in transitionNames"
-        :key="name"
-      >
-        <TilesBezierItem
-          :name="name"
-          :comp="transitionList[name]"
-        />
-      </template>
-    </FadeTransition>
-  </div>
-</template>
-
 <script setup>
 const transitionList = {
-  FadeTransition: resolveComponent('FadeTransition'),
-  ZoomCenterTransition: resolveComponent('ZoomCenterTransition'),
-  ZoomXTransition: resolveComponent('ZoomXTransition'),
-  ZoomYTransition: resolveComponent('ZoomYTransition'),
-  SlideXLeftTransition: resolveComponent('SlideXLeftTransition'),
-  SlideXRightTransition: resolveComponent('SlideXRightTransition'),
-  SlideYUpTransition: resolveComponent('SlideYUpTransition'),
-  SlideYDownTransition: resolveComponent('SlideYDownTransition'),
+  BlurTransition: resolveComponent('BlurTransition'),
+  ClipPathTransition: resolveComponent('ClipPathTransition'),
+  DissolveTransition: resolveComponent('DissolveTransition'),
+  FadeSlideTransition: resolveComponent('FadeSlideTransition'),
+  PushTransition: resolveComponent('PushTransition'),
+  RotateTransition: resolveComponent('RotateTransition'),
   ScaleTransition: resolveComponent('ScaleTransition'),
-  CollapseTransition: resolveComponent('CollapseTransition'),
+  WipeTransition: resolveComponent('WipeTransition'),
+  ZoomTransition: resolveComponent('ZoomTransition'),
 }
 
 const transitionNames = ref(Object.keys(transitionList))
 </script>
 
+<template>
+  <div class="page-wrapper container">
+    <DissolveListTransition tag="div" class="list-wrapper">
+      <TilesInstallationCmd key="installation" />
+
+      <TilesConfigurationEx key="configuration" />
+
+      <TilesHeaderInfo key="header" />
+
+      <TilesBezierItem
+        v-for="name in transitionNames"
+        :key="name"
+        :name="name"
+        :comp="transitionList[name]"
+      />
+    </DissolveListTransition>
+  </div>
+</template>
+
 <style>
-.container {
-  width: 100%;
+  .container {
+    width: 100%;
 
-  @media (min-width: 640px) { max-width: 640px; }   /* sm */
-  @media (min-width: 768px) { max-width: 768px; }   /* md */
-  @media (min-width: 1024px) { max-width: 1024px; } /* lg */
-  @media (min-width: 1280px) { max-width: 1280px; } /* xl */
-  @media (min-width: 1536px) { max-width: 1536px; } /* 2xl */
-}
+    @media (width >= 640px) { max-width: 640px; }   /* sm */
 
-.page-wrapper {
-  margin: 0 auto;
-  padding: 1rem 2rem;
+    @media (width >= 768px) { max-width: 768px; }   /* md */
 
-  @media (min-width: 640px) { padding-block: 1.5rem; }
-  @media (min-width: 1024px) { padding-block: 2rem; }
+    @media (width >= 1024px) { max-width: 1024px; } /* lg */
 
-  .list-wrapper {
-    display: grid;
-    gap: 1rem;
+    @media (width >= 1280px) { max-width: 1280px; } /* xl */
 
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.5rem;
-    }
+    @media (width >= 1536px) { max-width: 1536px; } /* 2xl */
+  }
 
-    @media (min-width: 1024px) {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 2rem;
-    }
+  .page-wrapper {
+    padding: 1rem 2rem;
+    margin: 0 auto;
 
-    @media (min-width: 1536px) {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 2.5rem;
+    @media (width >= 640px) { padding-block: 1.5rem; }
+
+    @media (width >= 1024px) { padding-block: 2rem; }
+
+    .list-wrapper {
+      display: grid;
+      gap: 1rem;
+
+      @media (width >= 768px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+      }
+
+      @media (width >= 1024px) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 2rem;
+      }
+
+      @media (width >= 1536px) {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 2.5rem;
+      }
     }
   }
-}
 </style>
