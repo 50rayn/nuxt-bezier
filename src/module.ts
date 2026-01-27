@@ -1,4 +1,4 @@
-import { defineNuxtModule, addComponent } from '@nuxt/kit'
+import { addComponent, defineNuxtModule, useLogger } from '@nuxt/kit'
 
 const COMPONENTS = [
   'BlurTransition',
@@ -12,42 +12,40 @@ const COMPONENTS = [
   'ZoomTransition',
   'DissolveListTransition',
   'ScaleListTransition',
-] as const;
-
-type PartialComponents =  (typeof COMPONENTS)[number]
+] as const
 
 export interface ModuleOptions {
+  /**
+   * Prefix for all transition components
+   * @default ''
+   */
   prefix?: string
-  components?: PartialComponents[]
 }
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'nuxt-bezier',
-    configKey: 'nuxtBezier'
+    configKey: 'nuxtBezier',
+    compatibility: {
+      nuxt: '>=3.0.0',
+    },
   },
   defaults: {
-    prefix: ''
+    prefix: '',
   },
-  setup (options, nuxt) {
-    let componentsToRegister: PartialComponents[]
-
-    if (Array.isArray(options.components) && options.components.every(name => COMPONENTS.includes(name))) {
-      componentsToRegister = options.components;
-    } else if (options.components !== undefined) {
-      throw new Error('Invalid "components" provided for nuxtBezier module. Please provide a valid array of component names.');
-    } else {
-      componentsToRegister = [...COMPONENTS];
-    }
+  setup(options, nuxt) {
+    const logger = useLogger('nuxt-bezier')
 
     nuxt.options.css.push('@noction/vue-bezier/styles')
 
-    for (const componentName of componentsToRegister) {
+    for (const componentName of COMPONENTS) {
       addComponent({
         name: `${options.prefix}${componentName}`,
         filePath: '@noction/vue-bezier',
-        export: componentName
+        export: componentName,
       })
     }
-  }
+
+    logger.success(`Registered ${COMPONENTS.length} transition components`)
+  },
 })
