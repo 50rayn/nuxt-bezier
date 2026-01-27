@@ -1,31 +1,52 @@
 {
   "name": "nuxt-bezier",
+  "type": "module",
   "version": "1.12.1",
-  "description": "Nuxt reusable transition components",
+  "description": "A Nuxt module providing Vue 3 transition components with Bezier timing functions. Includes fade, dissolve, blur, scale, slide, push, wipe, rotate, zoom, and clip-path transitions.",
   "author": {
     "name": "50rayn",
     "email": "soryngitlan@gmail.com"
   },
+  "license": "MIT",
+  "homepage": "https://50rayn.github.io/nuxt-bezier/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/50rayn/nuxt-bezier.git"
   },
-  "homepage": "https://50rayn.github.io/nuxt-bezier/",
   "bugs": {
     "url": "https://github.com/50rayn/nuxt-bezier/issues",
     "email": "soryngitlan@gmail.com"
   },
-  "license": "MIT",
-  "type": "module",
+  "keywords": [
+    "nuxt",
+    "nuxt-module",
+    "vue",
+    "vue3",
+    "transitions",
+    "animations",
+    "bezier",
+    "fade",
+    "dissolve",
+    "blur",
+    "scale",
+    "slide",
+    "push",
+    "wipe",
+    "rotate",
+    "zoom",
+    "clip-path",
+    "transition-group",
+    "css-transitions",
+    "vue-transitions"
+  ],
+  "sideEffects": false,
   "exports": {
     ".": {
-      "types": "./dist/types.d.ts",
-      "import": "./dist/module.mjs",
-      "require": "./dist/module.cjs"
+      "types": "./dist/types.d.mts",
+      "import": "./dist/module.mjs"
     }
   },
-  "main": "./dist/module.cjs",
-  "types": "./dist/types.d.ts",
+  "main": "./dist/module.mjs",
   "files": [
     "dist"
   ],
