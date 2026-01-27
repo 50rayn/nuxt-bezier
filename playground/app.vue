@@ -38,8 +38,12 @@ const listTransitions = {
 
     <!-- Appear Transitions -->
     <section key="appear-section" class="section">
-      <h2 class="section-title">Appear</h2>
-      <p class="section-desc">Single element transitions with v-if/v-show</p>
+      <h2 class="section-title">
+        Appear
+      </h2>
+      <p class="section-desc">
+        Single element transitions with v-if/v-show
+      </p>
       <div class="grid-wrapper">
         <TilesBezierItem
           v-for="(comp, name) in appearTransitions"
@@ -52,8 +56,12 @@ const listTransitions = {
 
     <!-- Between Transitions -->
     <section key="between-section" class="section">
-      <h2 class="section-title">Between</h2>
-      <p class="section-desc">Switching elements with v-if/v-else and mode</p>
+      <h2 class="section-title">
+        Between
+      </h2>
+      <p class="section-desc">
+        Switching elements with v-if/v-else and mode
+      </p>
       <div class="grid-wrapper">
         <TilesBezierBetweenItem
           v-for="(comp, name) in betweenTransitions"
@@ -66,8 +74,12 @@ const listTransitions = {
 
     <!-- List Transitions -->
     <section key="list-section" class="section">
-      <h2 class="section-title">List</h2>
-      <p class="section-desc">TransitionGroup for v-for lists</p>
+      <h2 class="section-title">
+        List
+      </h2>
+      <p class="section-desc">
+        TransitionGroup for v-for lists
+      </p>
       <div class="grid-wrapper">
         <TilesBezierListItem
           v-for="(comp, name) in listTransitions"
