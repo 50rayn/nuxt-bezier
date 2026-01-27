@@ -46,6 +46,7 @@
   "devDependencies": {
     "@nuxt/devtools": "^3.1.1",
     "@nuxt/eslint-config": "^1.13.0",
+    "@nuxt/fonts": "^0.11.0",
     "@nuxt/module-builder": "^1.0.2",
     "@nuxt/schema": "^4.3.0",
     "@nuxt/test-utils": "^3.23.0",
@@ -53,7 +54,9 @@
     "bumpp": "^10.4.0",
     "changelogen": "^0.6.2",
     "eslint": "^9.39.2",
+    "normalize.css": "^8.0.1",
     "nuxt": "^4.3.0",
+    "shiki": "^3.21.0",
     "typescript": "~5.9.3",
     "vitest": "^4.0.18"
   },
